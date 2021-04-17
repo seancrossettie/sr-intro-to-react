@@ -4,7 +4,11 @@ import Counter from './Counter'
 
 function App() {
   return (
-      <Counter />
+  <>
+      <Counter appName="Counter 1" startValue={200} />
+      <Counter appName="Counter 2" startValue={200} />
+      <Counter appName="Counter 3" startValue={200} />
+  </>
   )
 }
 

@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
-function Counter() {
-  const [counter, setCounter] = useState(0);
+export default function Counter({ appName, startValue }) {
+  const [counter, setCounter] = useState(startValue);
   const [userInput, setUserInput] = useState(0);
-  const [counterName, setCounterName] = useState("Counter")
+  const [counterName, setCounterName] = useState(appName)
 
   return (
-    <>
+    <div>
       <input onChange={(e) => setCounterName(e.target.value)}></input>
       <h1>{counterName}</h1>
       <h2>{counter}</h2>
@@ -27,8 +27,6 @@ function Counter() {
       }
   
       <button onClick={() => setCounter(0)}>Reset</button>
-    </>
+    </div>
   );
 }
-
-export default Counter;
